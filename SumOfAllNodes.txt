@@ -1,0 +1,27 @@
+// Code to Find Sum Of All Nodes Of A Binary Tree :-
+
+// Method 1 :-
+int CountNodes(TreeNode* root){
+    if(root==NULL)
+        return 0;
+
+    return root->val + CountNodes(root->left) + CountNodes(root->right);
+    
+}
+
+//Method 2 - using Inorder Traversal ( any one of three traversals can be used):-
+int CountNodes(TreeNode* root){
+    int count=0;
+    traversal(root,&count);
+    return count;
+}
+void Traversal(TreeNode* root,int* ct){
+    if(root==NULL)
+    return;
+
+    Traversal(root->left,ct);
+    *ct = *ct + root->val;
+    Traversal(root->right,ct);
+}
+
+

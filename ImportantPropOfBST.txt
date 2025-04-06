@@ -1,0 +1,2 @@
+Inorder Traversal of a Binary Search Tree is Sorted!
+This property of BST is used to solve many BST Questions!!
